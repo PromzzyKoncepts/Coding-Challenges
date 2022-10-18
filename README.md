@@ -1,75 +1,53 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+You are choreographing a circus show with various animals. For one act, you are given two kangaroos on a number line ready to jump in the positive direction (i.e, toward positive infinity).
 
-# Project Name
+The first kangaroo starts at location  and moves at a rate of  meters per jump.
+The second kangaroo starts at location  and moves at a rate of  meters per jump.
+You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.
 
-> Description the project.
-
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+Example
 
 
 
-## Authors
 
-👤 **Author1**
+After one jump, they are both at , (, ), so the answer is YES.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+Function Description
 
-👤 **Author2**
+Complete the function kangaroo in the editor below.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+kangaroo has the following parameter(s):
 
-## 🤝 Contributing
+int x1, int v1: starting position and jump distance for kangaroo 1
+int x2, int v2: starting position and jump distance for kangaroo 2
+Returns
 
-Contributions, issues, and feature requests are welcome!
+string: either YES or NO
+Input Format
 
-Feel free to check the [issues page](../../issues/).
+A single line of four space-separated integers denoting the respective values of , , , and .
 
-## Show your support
+Constraints
 
-Give a ⭐️ if you like this project!
+Sample Input 0
 
-## Acknowledgments
+0 3 4 2
+Sample Output 0
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+YES
+Explanation 0
 
-## 📝 License
+The two kangaroos jump through the following sequence of locations:
 
-This project is [MIT](./LICENSE) licensed.
+image
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+From the image, it is clear that the kangaroos meet at the same location (number  on the number line) after same number of jumps ( jumps), and we print YES.
+
+Sample Input 1
+
+0 2 5 3
+Sample Output 1
+
+NO
+Explanation 1
+
+The second kangaroo has a starting location that is ahead (further to the right) of the first kangaroo's starting location (i.e., ). Because the second kangaroo moves at a faster rate (meaning ) and is already ahead of the first kangaroo, the first kangaroo will never be able to catch up. Thus, we print NO.
